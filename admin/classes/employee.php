@@ -45,7 +45,19 @@
         return $array;  
     }
 
-   
+    public function edit_employee($editID){
+        
+        $query = "SELECT * FROM employee WHERE id = '".$editID."'";
+        $result = mysqli_query($this->conn, $query);
+        while($row = mysqli_fetch_assoc($result))  
+        {  
+            $array[] = $row;  
+        }  
+        // print_r($array);
+        return $array;  
+
+    }
+
     public function delete_employee($deleteID){
 
         $delete_query = "DELETE FROM employee WHERE id = '".$deleteID."'";

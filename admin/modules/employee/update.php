@@ -6,8 +6,10 @@
 
     if(isset($_GET['editID']) && !empty($_GET['editID'])){
         $editID = $_GET['editID'];
-        $emp_obj->edit_employee($editID);
+        $dataById = $emp_obj->edit_employee($editID);
     }
+   
+   
 ?>
 <html> 
     <head> 
