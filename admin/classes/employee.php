@@ -35,14 +35,26 @@
     public function view_employee(){
 
         $array = array();  
-           $query = "SELECT * FROM employee";  
-           $result = mysqli_query($this->conn, $query);  
-           while($row = mysqli_fetch_assoc($result))  
-           {  
-                $array[] = $row;  
-           }  
-          // print_r($array);
-           return $array;  
+        $query = "SELECT * FROM employee";  
+        $result = mysqli_query($this->conn, $query);  
+        while($row = mysqli_fetch_assoc($result))  
+        {  
+            $array[] = $row;  
+        }  
+        // print_r($array);
+        return $array;  
     }
+
+   
+    public function delete_employee($deleteID){
+
+        $delete_query = "DELETE FROM employee WHERE id = '".$deleteID."'";
+        $result = mysqli_query($this->conn, $delete_query);
+        if($result == true){
+            echo "Delete data successfully";
+        }
+    }
+
+   
 }
 ?>
