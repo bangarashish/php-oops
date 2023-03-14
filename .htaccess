@@ -1,6 +1,6 @@
 RewriteEngine On
-RewriteBase /amanda/admin/
+RewriteBase /php_oops/admin/
 RewriteRule ^index\.php＄ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /amanda/admin/index.php [L]
+RewriteRule . /php_oops/admin/newindex.php [L]
